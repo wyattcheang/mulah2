@@ -137,13 +137,14 @@ p.title{
 
 label{
     padding: 10px 0 10px 0;
-    font-family: sans-serif;
+    font-family: "Roboto Condensed" ,sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
 
 input{
     padding: 10px 10px 10px 10px;
+    font-family: "Roboto Condensed" ,sans-serif;
     font-size: 28px;
     border-radius: 8px;
 }
@@ -212,4 +213,30 @@ div.detail{
 
 .button:hover{
     background-colorcolor: #c75913;
+}
+
+
+p.point{
+    margin: 10px 0 10px 0;
+    text-align: left;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 90px;
+}
+
+span.smaller{
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.royalty-points{
+    padding: 10px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    background-color: #e97123;
+    color: white;
+    border-radius: 42px;
 }
