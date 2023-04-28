@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640, user-scalable=no" id="wixMobileViewport">
+  <link rel="stylesheet" href="style.css">
+  <title>Page2</title>
+</head>
+<body>
+<div class="container">
+
+  <div class="logo2">
+    <img src="img/mulah_logo.webp" width="200" alt="">
+  </div>
+  <p class="title">Registration</p>
+  <p class="reminder">Please fill up your details</p>
+
+  <div class="name">
+    <label for="username">Name</label>
+    <input type="text" id="username" value="Enter Name">
+    <p class="reminder">*Please insert your birthday.</p>
+  </div>
+
+  <div class="bod">
+    <label>Birthday</label>
+    <div class="dd-mm-yy">
+      <input type="text" id="dd" value="DD">
+      <input type="text" id="mm" value="MM">
+      <input type="text" id="yy" value="YY">
+    </div>
+    <p class="reminder">*Please insert a valid email address.</p>
+  </div>
+
+  <div class="email-address">
+    <label for="email">Email</label>
+    <input type="text" id="email" value="Email Address">
+    <p class="reminder">*Please insert a valid email address.</p>
+    <div class="check">
+      <input type="checkbox" id="no-email" name="no-email" value="Bike">
+      <label class="no-email" for="no-email">No email address</label><br>
+    </div>
+  </div>
+
+  <div class="the-button">
+    <button class="button" onclick="getInputValue()">Continue</button>
+    <p id="errorMessage">*Incorrect Information! Please check again.</p>
+    <script>
+      function getInputValue() {
+        const input = document.getElementById("phoneNumber");
+        const value = input.value;
+        if(value === "173527250"){
+          const errorMessage = document.getElementById("errorMessage");
+          window.location.href = "index2.html";
+          errorMessage.style.visibility = "hidden";
+        }else{
+          const errorMessage = document.getElementById("errorMessage");
+          errorMessage.style.visibility = "visible";
+        }
+      }
+    </script>
+  </div>
+
+  <hr id="line">
+
+  <div class="powered">
+    <p id="input">Powered by <a class="link" href="https://www.mulahrewards.com">MulahRewards.com</a></p>
+  </div>
+
+</div>
+</body>
+</html>

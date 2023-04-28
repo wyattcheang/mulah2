@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640, user-scalable=yes" id="wixMobileViewport">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <title>Page1</title>
 </head>
-<body>
+<body class="device-mobile-optimized">
 <div class="container">
     <div class="logo">
       <img src="img/mulah_logo.webp" width="300">
@@ -17,19 +20,35 @@
     <div class = "bold-words">
         <p>Check Your Loyalty Points & Rewards</p>
     </div>
-    <div class="phone-number">
-        <div class="country-code">
-            <select class="country-code">
-                <option value="+60">+60</option>
-            </select>
-            <input class="phone" type="phone" id="phone" name="phone" value="Enter your mobile number"><br>
+    <div class="phone">
+        <select class="country-code">
+            <option value="+60">+60</option><br>
+            <hr>
+        </select>
+        <div class="phone-number">
+            <input class="phone-input" id="phoneNumber" value="Enter your mobile number" required><br>
+            <hr>
         </div>
     </div>
     <div class="the-button">
-        <a href="page2.html">
-            <button class="button">Check Loyalty Points</button>
-        </a>
+        <button class="button" onclick="getInputValue()">Check Loyalty Points</button>
+        <p id="errorMessage">*Incorrect Phone Number! Please try again.</p>
+        <script>
+            function getInputValue() {
+                const input = document.getElementById("phoneNumber");
+                const value = input.value;
+                if(value === "173527250"){
+                    const errorMessage = document.getElementById("errorMessage");
+                    window.location.href = "index2.html";
+                    errorMessage.style.visibility = "hidden";
+                }else{
+                    const errorMessage = document.getElementById("errorMessage");
+                    errorMessage.style.visibility = "visible";
+                }
+            }
+        </script>
     </div>
+    <hr id="line">
     <div class="powered">
         <p id="input">Powered by <a class="link" href="https://www.mulahrewards.com">MulahRewards.com</a></p>
     </div>
