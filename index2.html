@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=640, user-scalable=no" id="wixMobileViewport">
+  <meta name="viewport" content="width=640, user-scalable=yes" id="wixMobileViewport">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <title>Page2</title>
 </head>
-<body>
+<body class="device-mobile-optimized">
 <div class="container">
 
   <div class="logo2">
@@ -46,17 +49,19 @@
     <p id="errorMessage">*Incorrect Information! Please check again.</p>
     <script>
       function getInputValue() {
-        const input = document.getElementById("phoneNumber");
-        const value = input.value;
-        if(value === "173527250"){
-          const errorMessage = document.getElementById("errorMessage");
-          window.location.href = "index2.html";
-          errorMessage.style.visibility = "hidden";
-        }else{
-          const errorMessage = document.getElementById("errorMessage");
-          errorMessage.style.visibility = "visible";
-        }
+        window.location.href = "index3.html";
       }
+        // const input = document.getElementById("phoneNumber");
+        // const value = input.value;
+        // if(value === "173527250"){
+        //   const errorMessage = document.getElementById("errorMessage");
+        //   window.location.href = "index3.html";
+        //   errorMessage.style.visibility = "hidden";
+        // }else{
+        //   const errorMessage = document.getElementById("errorMessage");
+        //   errorMessage.style.visibility = "visible";
+        // }
+      // }
     </script>
   </div>
 
